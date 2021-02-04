@@ -1,0 +1,109 @@
+body {
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 80%;
+    top: 120px;
+    // height: 80vh;
+    margin: auto;
+    color: #4a4b5e;
+    //mobile
+    @include from (md){
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+.accordion {
+    &__title {
+        padding-top: 1rem;
+        text-align: center;
+
+    }
+
+    &__content {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        background: #eeeeee;
+        border-radius: 15px;
+        padding: 6rem 1.8rem 0;
+        list-style: none;
+
+        @include from (md) {
+            // display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__container {
+        list-style: none;
+        @include from(md) {
+            width: 50%;
+        }
+    }
+    
+    &__item{
+        border-bottom: solid #e7e7e9 1px ;
+
+        &-header{
+            position: relative;
+            padding: 1.5rem 0 .9rem;
+    
+            &:hover {
+                color: #ff9000;
+                cursor: pointer;
+            }  
+            &.show + .accordion__item-body{
+                transition: all 3000ms linear;  
+                display: block;
+            }  
+        }
+
+        span{
+            $font-size-small: .9rem;
+            font-size: $font-size-small;
+    
+            &::after{
+                position: absolute;
+                content: url(../images/icon-arrow-down.svg);
+                right: 0;
+            }    
+        }
+
+        &-body{
+            display: none;
+            font-size: .9rem;
+            padding-bottom: .5rem; 
+        }    
+    }
+    &__img {
+        position: absolute;
+        text-align: center;
+        padding-bottom: 1rem;
+        top: -6.6rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        &::before{
+            position: absolute;
+            content: url(../images/bg-pattern-mobile.svg) ;
+            bottom: 0;
+            left: 25px;
+        }
+        @include from (md) {
+            padding-top: 50px;
+            width: 50%;
+            position: static;
+            text-align:unset;
+            transform: translate(0);
+            // width: 200px;
+            &::before{
+                position: absolute;
+                top: 150px;
+            }
+        }
+    }
+}

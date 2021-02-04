@@ -1,0 +1,38 @@
+//Layout
+$margin-top-elements: 2rem;
+$padding-side: 30px !default;
+$margin-top-desktop: 2.5rem;
+$margin-side: 30px;
+$margin-side-desktop: 80px;
+$margin-side-desktop-large: 120px;
+$padding-top-nav: 45px;
+$padding-top: 2rem;
+$padding-side-desktop: 80px;
+$padding-side-desktop-large: 120px;
+
+//font
+$font-title: 2.5em;
+$font-banner: 2.5em;
+$font-family-bold: Alata;
+$font-family-thin: "Josefin Sans";
+$font-weight-thin: 400;
+
+//color
+$color-list-navbar: #FFFFFF;
+$color-brand: #FFFFFF;
+
+//z-index
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-fixed-aumented: 110;
+$z-modal: 100;
+
+//Breakpoint
+$breakpoints : (
+        sm: 576px,
+        md: 768px,
+        l: 992px,
+        xl: 1200px 
+);
